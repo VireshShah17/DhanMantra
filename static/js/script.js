@@ -1,3 +1,16 @@
 function toggleMenu() {
-    document.getElementById('navLinks').classList.toggle('active');
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("active");
 }
+
+// Highlight current page link
+const currentPage = window.location.pathname;
+console.log(`Current page: ${currentPage}`);
+const links = document.querySelectorAll(".nav-links a");
+
+links.forEach(link => {
+    const linkPage = link.getAttribute("href");
+    if (linkPage === currentPage || (linkPage === "#" && currentPage === "")) {
+        link.classList.add("active");
+    }
+});

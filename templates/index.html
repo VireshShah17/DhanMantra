@@ -1,62 +1,69 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<section class="hero">
-    <div class="container">
-        <h1>Welcome to Dhan Mantra Advisor</h1>
-        <p>Your trusted guide to financial freedom and smart investing</p>
-    </div>
-</section>
-
-<section class="intro">
-    <div class="container intro-content">
-        <h2>Team at Dhan – Financial Advisor & Market Strategist</h2>
-        <p>
-            Santosh Gokhe is a dedicated Financial Advisor with a deep understanding of market dynamics and a strong
-            foundation in technical analysis. Backed by his NISM-Series VIII (Equity Derivatives) Certification, he
-            brings a research-driven, disciplined approach to helping individuals navigate the complexities of
-            investing.
-        </p>
-        <p>
-            With a focus on long-term value creation and transparent guidance, Santosh works closely with clients to
-            help them make informed decisions—whether they’re just starting out or looking to grow their wealth more
-            strategically.
-        </p>
-        <p>
-            At Dhan Mantra Advisor, our mission is simple: to simplify investing and empower you to take confident steps
-            toward your financial goals.
-        </p>
-    </div>
-</section>
-
-<section class="cta">
-    <div class="container">
-        <button class="btn">📞 Book a Free Consultation</button>
-        <button class="btn secondary">🚀 Start Your Financial Journey</button>
-    </div>
-</section>
-
-<section class="services">
-    <div class="container">
-        <h2>Our Key Services</h2>
-        <div class="card-grid">
-            <div class="card">
-                <h3>Investment Planning</h3>
-                <p>Personalized strategies tailored to your risk and goals.</p>
-            </div>
-            <div class="card">
-                <h3>Retirement Planning</h3>
-                <p>Secure your future with smart, long-term plans.</p>
-            </div>
-            <div class="card">
-                <h3>Equity & Derivatives</h3>
-                <p>Backed by NISM expertise to navigate markets confidently.</p>
-            </div>
-            <div class="card">
-                <h3>Portfolio Reviews</h3>
-                <p>Ongoing guidance to optimize and rebalance investments.</p>
-            </div>
+<!-- Hero -->
+<section class="hero" id="home">
+    <div class="hero-content" data-aos="zoom-in">
+        <h1>Empowering Your Financial Journey</h1>
+        <p>Achieve financial freedom with transparent, research-driven guidance from our market strategist.</p>
+        <div class="btn-group">
+            <a href="#contact" class="btn btn-primary">Book a Free Consultation</a>
+            <a href="#contact" class="btn btn-secondary">Start Your Financial Journey</a>
         </div>
     </div>
 </section>
+
+<!-- About -->
+<section class="about" id="about">
+    <div class="about-grid">
+        <div class="about-text" data-aos="fade-right">
+            <h2>Meet Santosh Gokhe – Financial Advisor & Market Strategist</h2>
+            <p>Santosh Gokhe is a dedicated Financial Advisor with a deep understanding of market dynamics and a strong
+                foundation in technical analysis. Backed by his NISM-Series VIII (Equity Derivatives) Certification, he
+                brings a research-driven, disciplined approach to helping individuals navigate the complexities of
+                investing.</p>
+            <p>With a focus on long-term value creation and transparent guidance, Santosh works closely with clients to
+                help them make informed decisions—whether they’re just starting out or looking to grow their wealth more
+                strategically.</p>
+            <p>At <strong>Dhan Mantra Advisor</strong>, our mission is simple: to simplify investing and empower you to
+                take confident steps toward your financial goals.</p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1603398938378-cfe5661551c9?auto=format&fit=crop&w=800&q=80"
+            alt="Santosh Gokhe – Financial Advisor" class="about-img" data-aos="fade-left" />
+    </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+    <h2 data-aos="fade-up">Our Key Services</h2>
+    <div class="card-grid">
+        <div class="card" data-aos="flip-left" data-aos-delay="100">
+            <i class="fas fa-chart-line"></i>
+            <h3>Portfolio Management</h3>
+            <p>Customized strategies to balance risk and return, tailored to your financial goals.</p>
+        </div>
+        <div class="card" data-aos="flip-left" data-aos-delay="200">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Market Insights</h3>
+            <p>Timely research and actionable insights on market trends and investment opportunities.</p>
+        </div>
+        <div class="card" data-aos="flip-left" data-aos-delay="300">
+            <i class="fas fa-piggy-bank"></i>
+            <h3>Retirement Planning</h3>
+            <p>Comprehensive plans to secure your future and ensure financial independence.</p>
+        </div>
+        <div class="card" data-aos="flip-left" data-aos-delay="400">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Risk Management</h3>
+            <p>Robust risk assessment and mitigation to safeguard your investments.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="cta" id="contact" data-aos="zoom-in">
+    <h2>Ready to Take Charge of Your Financial Future?</h2>
+    <a href="mailto:consult@dhanmantra.com" class="btn">Book a Free Consultation</a>
+</section>
+
 {% endblock %}

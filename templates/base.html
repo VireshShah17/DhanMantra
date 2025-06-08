@@ -3,63 +3,82 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DhanMantra</title>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhan Mantra Advisor</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <!-- Animate On Scroll (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
-
-    <nav class="navbar">
-        <div class="logo">Dhan<span>Mantra</span></div>
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+    <!-- Navbar -->
+    <nav class="navbar" data-aos="fade-down">
+        <a href="#home" class="logo">Dhan Mantra</a>
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Menu">&#9776;</button>
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
         </div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#">Why Dhan Mantra</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Insights</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><button class="btn login">Log In</button></li>
-            <li><button class="btn signup">Sign Up</button></li>
-        </ul>
     </nav>
 
     {% block content %}
     {% endblock %}
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <h2>Dhan <span>Mantra</span></h2>
-                <p>Empowering You Financially</p>
+                <h3>Dhan Mantra Advisor</h3>
+                <p>Empowering your financial journey with transparent, research-driven advice tailored to your goals.
+                </p>
             </div>
-
             <div class="footer-links">
-                <a href="#">About Us</a>
-                <a href="#">Services</a>
-                <a href="#">Why Choose Us</a>
-                <a href="#">Compliance & Disclosures</a>
-                <a href="#">Contact Us</a>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-
             <div class="footer-contact">
-                <p><strong>Contact:</strong> +91-XXXXXXXXXX</p>
-                <p><strong>Email:</strong> info@dhanmantra.com</p>
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:consult@dhanmantra.com">consult@dhanmantra.com</a></p>
+                <p>Phone: <a href="tel:+911234567890">+91 123 456 7890</a></p>
             </div>
         </div>
-
         <div class="footer-bottom">
             <p>&copy; 2025 Dhan Mantra Advisor. All Rights Reserved.</p>
         </div>
     </footer>
 
 
-    <script src="{% static 'js/script.js' %}"></script>
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800,
+        });
+
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('open');
+        };
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('open');
+            });
+        });
+    </script>
 </body>
 
 </html>
