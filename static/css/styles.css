@@ -101,7 +101,7 @@ body {
     }
 
     .nav-links a {
-        color: white;
+        color: black;
         width: 100%;
         padding: 0.5rem 1rem;
         font-weight: 600;
@@ -116,7 +116,7 @@ body {
 
 /* Hero */
 .hero {
-    background: url('https://images.unsplash.com/photo-1508385082359-f38bf7842e02?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    background: url('../images/hero-img.webp') center/cover no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
