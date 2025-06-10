@@ -19,11 +19,11 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar" data-aos="fade-down">
-        <a href="#home" class="logo">Dhan Mantra</a>
+        <a href="{% url 'home' %}" class="logo"><img src="{% static 'images/dhan_mantra_logo.png' %}"></a>
         <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Menu">&#9776;</button>
         <div class="nav-links" id="navLinks">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
             <a href="#services">Services</a>
             <a href="#whychooseus">Why Choose Us</a>
             <a href="#compliance&disclousers">Compliances & Disclosures</a>
