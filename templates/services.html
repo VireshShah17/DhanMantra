@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main class="services-container">
+    <section class="services-header">
+        <h1>Our Services</h1>
+        <p>Empowering you with the right tools, strategy, and guidance for financial success.</p>
+    </section>
+
+    <section class="services-grid">
+        <div class="service-card">
+            <div class="icon" data-lucide="calendar"></div>
+            <h3>Financial Planning</h3>
+            <p>Personalized plans to help you grow, manage, and protect your wealth—at every stage of life.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon" data-lucide="bar-chart-3"></div>
+            <h3>Investment Advisory</h3>
+            <p>Expert guidance to build a smart, goal-based investment strategy tailored to you.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon" data-lucide="user-check"></div>
+            <h3>Personal Advisory</h3>
+            <p>One-on-one financial advice to support your evolving goals with clarity and confidence.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon" data-lucide="rotate-ccw"></div>
+            <h3>Portfolio Rebalancing</h3>
+            <p>Regular adjustments to keep your investments aligned with your goals and risk profile.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon" data-lucide="pie-chart"></div>
+            <h3>Portfolio Management</h3>
+            <p>Professional portfolio management focused on long-term growth and risk control.</p>
+        </div>
+    </section>
+</main>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    lucide.createIcons();
+</script>
+{% endblock %}

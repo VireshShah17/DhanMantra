@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="contact-us" id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+
+        <div class="contact-grid">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <p><strong>📍 Address:</strong> 123 Finance Street, Mumbai, MH 400001</p>
+                <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+                <p><strong>📧 Email:</strong> contact@dhanmantra.in</p>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+                <!-- Google Map -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="200"
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <input type="text" name="subject" placeholder="Subject" />
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
