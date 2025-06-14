@@ -21,7 +21,7 @@
     <!-- Navbar -->
     <nav class="navbar" data-aos="fade-down">
         <a href="{% url 'home' %}" class="logo"><img src="{% static 'images/dhan_mantra_logo.png' %}"></a>
-        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Menu">&#9776;</button>
+        <button class="menu-toggle"  aria-label="Toggle Menu">&#9776;</button>
         <div class="nav-links" id="navLinks">
             <a href="{% url 'home' %}">Home</a>
             <a href="{% url 'about' %}">About</a>
@@ -74,14 +74,30 @@
             duration: 800,
         });
 
-        function toggleMenu() {
+        document.addEventListener("DOMContentLoaded", function () {
+            // Toggle hamburger menu
+            function toggleMenu() {
+                console.log("clicked");
+                const navLinks = document.getElementById('navLinks');
+                navLinks.classList.toggle('open');
+            }
+
+            const toggleBtn = document.querySelector('.menu-toggle');
             const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('open');
-        };
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('navLinks').classList.remove('open');
-            });
+
+            // Attach toggle event
+            if (toggleBtn && navLinks) {
+                toggleBtn.addEventListener('click', toggleMenu);
+
+                // Close menu when a link is clicked
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('open');
+                    });
+                });
+            } else {
+                console.warn("Menu toggle or navLinks not found.");
+            }
         });
     </script>
 </body>
