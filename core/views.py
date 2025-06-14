@@ -19,3 +19,7 @@ def chooseUs(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+
+def compliancesAndDisclosures(request):
+    return render(request, "compliancesanddisclosures.html")

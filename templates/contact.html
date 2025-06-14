@@ -1,17 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+
 <section class="contact-us" id="contact">
     <div class="container">
-        <h2>Contact Us</h2>
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">Have a question or want to get started? We’re here to help.</p>
 
         <div class="contact-grid">
-            <!-- Contact Info -->
+            <!-- Contact Info Section -->
             <div class="contact-info">
                 <p><strong>📍 Address:</strong> 123 Finance Street, Mumbai, MH 400001</p>
                 <p><strong>📞 Phone:</strong> +91 98765 43210</p>
-                <p><strong>📧 Email:</strong> contact@dhanmantra.in</p>
+                <p><strong>📧 Email:</strong> <a href="mailto:contact@dhanmantra.in">contact@dhanmantra.in</a></p>
 
+                <!-- Social Media Icons -->
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -21,14 +24,17 @@
 
                 <!-- Google Map -->
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="200"
-                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8397388613596!2d72.877655075201!3d19.07433025224461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c87c8a4dbfdf%3A0xe1db3a43ecab14c4!2sBKC%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1718342982572!5m2!1sen!2sin"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
             </div>
 
-            <!-- Contact Form -->
-            <form class="contact-form">
+            <!-- Contact Form Section -->
+            <form class="contact-form" method="post" action="#">
+                {% csrf_token %}
                 <input type="text" name="name" placeholder="Your Name" required />
                 <input type="email" name="email" placeholder="Your Email" required />
                 <input type="text" name="subject" placeholder="Subject" />
@@ -38,4 +44,5 @@
         </div>
     </div>
 </section>
+
 {% endblock %}

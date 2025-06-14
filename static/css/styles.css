@@ -185,16 +185,52 @@ body {
     transition: transform 0.3s;
 }
 
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    /* Makes buttons pill-shaped */
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+
 .btn-primary {
     background: var(--accent);
     color: var(--dark);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background: #ffce00;
+    /* Or a slightly lighter shade of accent */
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
     background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
+    border: 2px solid var(--accent);
+    /* Use your theme's accent color */
+    color: var(--accent);
 }
+
+.btn-secondary:hover {
+    background: var(--accent);
+    color: var(--dark);
+    /* Make sure this contrasts well with accent */
+    transform: translateY(-2px);
+}
+
 
 .btn:hover {
     transform: translateY(-3px);
@@ -219,6 +255,27 @@ body {
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
+
+.about-container {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.intro-section,
+.who-we-are-section,
+.mission-vision {
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+}
+
 
 .about-text h2 {
     font-size: 2rem;
@@ -246,6 +303,51 @@ body {
     max-width: 1100px;
     margin: auto;
 }
+
+.products-header {
+    margin-top: 10vh;
+}
+
+.products-header h1 {
+    text-align: center;
+}
+
+.products-header p {
+    text-align: center;
+}
+
+.why-planning {
+    background: #f3f3f3;
+    padding: 2rem;
+    margin-top: 4rem;
+    border-radius: 12px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.why-planning h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.why-planning ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.why-planning li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.why-planning li::before {
+    position: absolute;
+    left: 0;
+}
+
 
 .card {
     background: var(--light);
@@ -526,6 +628,64 @@ body {
 }
 
 .why-choose-us {
+    background-color: #f9f9f9;
+    padding: 3rem 1rem;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 3rem auto;
+}
+
+.why-choose-us .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.why-choose-us .section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.why-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.why-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #fff;
+    padding: 1.2rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.why-list .icon {
+    font-size: 1.8rem;
+    color: var(--accent, #007BFF);
+    flex-shrink: 0;
+}
+
+.text-group h3 {
+    margin: 0 0 0.3rem;
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.text-group p {
+    margin: 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+.why-choose-us {
     background-color: var(--light);
     padding: 4rem 1.5rem;
     text-align: center;
@@ -618,6 +778,97 @@ body {
     line-height: 1.5;
 }
 
+.contact-us {
+    padding: 3rem 1rem;
+    background: #f4f7fb;
+    border-radius: 12px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contact-us .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-us .section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent, #007BFF);
+}
+
+.map-container {
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.contact-form button.btn-primary {
+    padding: 0.75rem;
+    background: var(--accent, #007BFF);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.contact-form button.btn-primary:hover {
+    background: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .map-container {
     margin-top: 1.5rem;
     border-radius: 8px;
@@ -669,4 +920,58 @@ body {
 
 .social-icons a:hover {
     color: var(--accent);
+}
+
+.compliance-section {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 12px auto 0;
+    background: var(--accent, #00aaff);
+    border-radius: 5px;
+}
+
+.disclaimer-box p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .disclaimer-box p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 20px;
+    }
 }
