@@ -8,7 +8,6 @@ colorama==0.4.4
 cryptography==3.4.8
 Django==5.2.2
 gunicorn==23.0.0
-idna==3.3
 importlib-metadata==4.6.4
 packaging==25.0
 paramiko==2.9.3
