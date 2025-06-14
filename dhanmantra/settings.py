@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -48,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'dhanmantra.urls'
@@ -134,3 +136,13 @@ EMAIL_HOST_PASSWORD = 'ohfc bccz wuth jznv'       # App password (not your regul
 # From and To Email Settings
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER            # Sender
 CONTACT_RECEIVER_EMAIL = 'viresh.shah@hotwaxsystems.com'  # Receiver
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+STATIC_URL = '/static/'
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Required for collectstatic
+STATICFILES_DIRS = [BASE_DIR / "static"]  # Where your CSS/JS/images live
+
+# Optional: for better performance with WhiteNoise
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
