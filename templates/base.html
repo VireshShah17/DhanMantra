@@ -115,38 +115,6 @@
                 console.warn("Menu toggle or navLinks not found.");
             }
         });
-
-        const modal = document.getElementById("contactModal");
-
-        function openModal() {
-            modal.style.display = "block";
-        }
-
-        function closeModal() {
-            modal.style.display = "none";
-        }
-
-        // Close when clicking outside the modal
-        window.onclick = function (event) {
-            if (event.target === modal) {
-                closeModal();
-            }
-        };
-
-        // Open modal once when homepage loads
-        window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(openModal, 500); // slight delay for effect
-        });
-
-        function openModal() {
-            document.body.style.overflow = 'hidden';
-            document.getElementById("contactModal").style.display = "block";
-        }
-
-        function closeModal() {
-            document.body.style.overflow = 'auto';
-            document.getElementById("contactModal").style.display = "none";
-        }
     </script>
 </body>
 
