@@ -15,25 +15,28 @@
 
 <!-- About -->
 <section class="about" id="about">
-    <div class="about-grid">
-        <div class="about-text" data-aos="fade-right">
-            <h2>Welcome to Dhan Mantra — Your Partner in Smart Investing</h2>
-            <p>At Dhan Mantra, we believe that true financial success comes from knowledge, discipline,
-                and consistent guidance. Our goal is to simplify investing for everyone — from first-time
-                investors to seasoned professionals — by offering well-researched, transparent, and
-                personalized financial solutions.</p>
-            <p>We focus on helping you build long-term wealth, manage risks intelligently, and navigate
-                markets with confidence. With Dhan Mantra by your side, investing doesn’t have to be
-                confusing — it can be empowering.</p>
-
+    <section class="about-enhanced">
+        <div class="container">
+            <h2 class="about-heading">Welcome to Dhan Mantra — Your Partner in Smart Investing</h2>
+            <p class="about-description">
+                At Dhan Mantra, we believe that true financial success comes from knowledge, discipline, and consistent
+                guidance.
+                Our goal is to simplify investing for everyone — from first-time investors to seasoned professionals —
+                by offering
+                well-researched, transparent, and personalized financial solutions.
+            </p>
+            <p class="about-description">
+                We focus on helping you build long-term wealth, manage risks intelligently, and navigate markets with
+                confidence.
+                With Dhan Mantra by your side, investing doesn’t have to be confusing — it can be empowering.
+            </p>
             <div class="cta-buttons">
-                <a href="#contact" class="btn-primary">Book a Free Consultation</a>
-                <a href="#services" class="btn-secondary">Start Your Financial Journey</a>
+                <a href="mailto:dhanmantraadvisory@gmail.com" class="btn-primary-enhanced">📅 Book a Free Consultation</a>
+                <a href="{% url 'services' %}" class="btn-secondary-enhanced">🚀 Start Your Financial Journey</a>
             </div>
         </div>
-        <img src="https://images.unsplash.com/photo-1603398938378-cfe5661551c9?auto=format&fit=crop&w=800&q=80"
-            alt="Financial Consultation" class="about-img" data-aos="fade-left" />
-    </div>
+    </section>
+
 </section>
 
 
@@ -75,12 +78,4 @@
         </div>
     </div>
 </section>
-
-
-<!-- CTA Banner -->
-<section class="cta" id="contact" data-aos="zoom-in">
-    <h2>Ready to Take Charge of Your Financial Future?</h2>
-    <a href="mailto:consult@dhanmantra.com" class="btn">Book a Free Consultation</a>
-</section>
-
 {% endblock %}
