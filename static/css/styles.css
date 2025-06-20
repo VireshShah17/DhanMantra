@@ -508,7 +508,7 @@ body {
 
 .services-header h1 {
     font-size: 2.5rem;
-    color: var(--accent);
+    color: black;
 }
 
 .services-grid {
@@ -539,7 +539,7 @@ body {
 }
 
 .service-card h3 {
-    color: var(--accent);
+    color: #0636a7bb;
     margin-bottom: 0.5rem;
 }
 
@@ -786,4 +786,52 @@ body {
     .container {
         padding: 20px;
     }
+}
+
+/* Floating button */
+.contact-float-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1001;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal background */
+.contact-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal content */
+.contact-modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+/* Close button */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
 }

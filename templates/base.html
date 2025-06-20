@@ -35,6 +35,23 @@
     {% block content %}
     {% endblock %}
 
+    <!-- Contact Button -->
+    <button id="openContactModal" class="contact-float-btn">Contact Us</button>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="contact-modal">
+        <div class="contact-modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Contact Us</h2>
+            <form class="contact-form" method="post" action="#">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -100,6 +117,21 @@
                 console.warn("Menu toggle or navLinks not found.");
             }
         });
+
+        document.getElementById('openContactModal').onclick = function () {
+            document.getElementById('contactModal').style.display = 'block';
+        };
+
+        document.querySelector('.close-modal').onclick = function () {
+            document.getElementById('contactModal').style.display = 'none';
+        };
+
+        window.onclick = function (event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        };
     </script>
 </body>
 
