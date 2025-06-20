@@ -43,7 +43,7 @@
         <div class="contact-modal-content">
             <span class="close-modal">&times;</span>
             <h2>Contact Us</h2>
-            <form class="contact-form" method="post" action="#">
+            <form class="contact-form" method="post" action="{% url 'contact' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button type="submit" class="btn btn-primary">Send Message</button>
@@ -132,6 +132,8 @@
                 modal.style.display = 'none';
             }
         };
+
+        document.querySelector('.btn-primary').addEventListener('click', ()=> console.log('modal was clicked'));
     </script>
 </body>
 
