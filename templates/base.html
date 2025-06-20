@@ -87,27 +87,23 @@
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
+        // Initialize AOS
         AOS.init({
             once: true,
             duration: 800,
         });
 
         document.addEventListener("DOMContentLoaded", function () {
-            // Toggle hamburger menu
-            function toggleMenu() {
-                console.log("clicked");
-                const navLinks = document.getElementById('navLinks');
-                navLinks.classList.toggle('open');
-            }
-
+            // ----- Hamburger Menu Logic -----
             const toggleBtn = document.querySelector('.menu-toggle');
             const navLinks = document.getElementById('navLinks');
 
-            // Attach toggle event
             if (toggleBtn && navLinks) {
-                toggleBtn.addEventListener('click', toggleMenu);
+                toggleBtn.addEventListener('click', function () {
+                    console.log("clicked");
+                    navLinks.classList.toggle('open');
+                });
 
-                // Close menu when a link is clicked
                 document.querySelectorAll('.nav-links a').forEach(link => {
                     link.addEventListener('click', () => {
                         navLinks.classList.remove('open');
@@ -116,24 +112,47 @@
             } else {
                 console.warn("Menu toggle or navLinks not found.");
             }
-        });
 
-        document.getElementById('openContactModal').onclick = function () {
-            document.getElementById('contactModal').style.display = 'block';
-        };
-
-        document.querySelector('.close-modal').onclick = function () {
-            document.getElementById('contactModal').style.display = 'none';
-        };
-
-        window.onclick = function (event) {
+            // ----- Contact Modal Logic -----
+            const openBtn = document.getElementById('openContactModal');
             const modal = document.getElementById('contactModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        };
+            const closeBtn = document.querySelector('.close-modal');
+            const submitBtn = document.querySelector('.contact-form .btn-primary');
 
-        document.querySelector('.btn-primary').addEventListener('click', ()=> console.log('modal was clicked'));
+            // Auto-show modal on first visit (per session)
+            if (modal && !sessionStorage.getItem('contactModalShown')) {
+                modal.style.display = 'block';
+                sessionStorage.setItem('contactModalShown', 'true');
+            }
+
+            // Open modal on button click
+            if (openBtn) {
+                openBtn.addEventListener('click', () => {
+                    modal.style.display = 'block';
+                });
+            }
+
+            // Close modal on close icon click
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                });
+            }
+
+            // Close modal if clicked outside
+            window.addEventListener('click', function (event) {
+                if (modal && event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // Optional: Form submit button clicked log
+            if (submitBtn) {
+                submitBtn.addEventListener('click', () => {
+                    console.log('Modal submit button was clicked');
+                });
+            }
+        });
     </script>
 </body>
 
