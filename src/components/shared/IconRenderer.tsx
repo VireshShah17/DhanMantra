@@ -8,7 +8,8 @@ interface IconRendererProps {
 }
 
 export function IconRenderer({ name, className, size = 24 }: IconRendererProps) {
-  const Icon = (Icons as Record<string, LucideIcon>)[name];
+  // Fix: Cast to 'unknown' first to bypass the strict overlap check
+  const Icon = (Icons as unknown as Record<string, LucideIcon>)[name];
 
   if (!Icon) {
     return <Icons.Circle className={className} size={size} aria-hidden="true" />;
