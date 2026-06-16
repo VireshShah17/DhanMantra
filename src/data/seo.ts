@@ -41,12 +41,6 @@ export const pageSEO: Record<string, SEOConfig> = {
       'Discover Dhan Mantra investment products — Mutual Funds, SIP, Portfolio solutions, Stock Baskets, and Financial Education.',
     path: ROUTES.PRODUCTS,
   },
-  [ROUTES.EDUCATION]: {
-    title: 'Financial Education | Dhan Mantra',
-    description:
-      'Access financial education resources, guides, articles, and webinars to make informed investment decisions with Dhan Mantra.',
-    path: ROUTES.EDUCATION,
-  },
   [ROUTES.CONTACT]: {
     title: 'Contact Us | Dhan Mantra',
     description:

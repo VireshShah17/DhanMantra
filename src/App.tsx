@@ -15,9 +15,9 @@ const ServicesPage = lazy(() =>
 const ProductsPage = lazy(() =>
   import('@/pages/ProductsPage').then((m) => ({ default: m.ProductsPage })),
 );
-const EducationPage = lazy(() =>
-  import('@/pages/EducationPage').then((m) => ({ default: m.EducationPage })),
-);
+// const EducationPage = lazy(() =>
+//   import('@/pages/EducationPage').then((m) => ({ default: m.EducationPage })),
+// );
 const ContactPage = lazy(() =>
   import('@/pages/ContactPage').then((m) => ({ default: m.ContactPage })),
 );
@@ -68,10 +68,10 @@ export default function App() {
             }
           />
           <Route
-            path={ROUTES.EDUCATION}
+            // path={ROUTES.EDUCATION}
             element={
               <Suspense fallback={<PageLoader />}>
-                <EducationPage />
+                {/* <EducationPage /> */}
               </Suspense>
             }
           />
