@@ -7,9 +7,9 @@ import { ProductsGrid } from '@/components/cards/ProductsGrid';
 import { FinancialPlanningSection } from '@/components/sections/FinancialPlanningSection';
 import { TimelineSection } from '@/components/sections/TimelineSection';
 import { WhyChooseUsSection } from '@/components/sections/WhyChooseUsSection';
-import { TrustSection } from '@/components/sections/TrustSection';
-import { TestimonialCarousel } from '@/components/sections/TestimonialCarousel';
-import { FAQSection } from '@/components/sections/FAQSection';
+// import { TrustSection } from '@/components/sections/TrustSection';
+// import { TestimonialCarousel } from '@/components/sections/TestimonialCarousel';
+// import { FAQSection } from '@/components/sections/FAQSection';
 import { ConsultationCTA } from '@/components/sections/ConsultationCTA';
 // import { DisclaimerSection } from '@/components/sections/DisclaimerSection';
 import { NewsletterSection } from '@/components/sections/NewsletterSection';
@@ -30,9 +30,9 @@ export function HomePage() {
       <FinancialPlanningSection />
       <TimelineSection />
       <WhyChooseUsSection />
-      <TrustSection />
-      <TestimonialCarousel />
-      <FAQSection />
+      {/* <TrustSection /> */}
+      {/* <TestimonialCarousel /> */}
+      {/* <FAQSection /> */}
       <ConsultationCTA />
       {/* <DisclaimerSection variant="prominent" className="container-narrow mx-auto mb-16 px-4 sm:px-6 lg:px-8" /> */}
       <NewsletterSection />
