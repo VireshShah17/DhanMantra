@@ -4,7 +4,7 @@ import { ServicesGrid } from '@/components/cards/ServicesGrid';
 import { FinancialPlanningSection } from '@/components/sections/FinancialPlanningSection';
 import { WhyChooseUsSection } from '@/components/sections/WhyChooseUsSection';
 import { ConsultationCTA } from '@/components/sections/ConsultationCTA';
-import { FAQSection } from '@/components/sections/FAQSection';
+// import { FAQSection } from '@/components/sections/FAQSection';
 import { services } from '@/data/services';
 import { pageSEO } from '@/data/seo';
 import { ROUTES } from '@/constants/routes';
@@ -23,7 +23,7 @@ export function ServicesPage() {
       />
       <FinancialPlanningSection />
       <WhyChooseUsSection />
-      <FAQSection />
+      {/* <FAQSection /> */}
       <ConsultationCTA />
     </>
   );
