@@ -1,0 +1,67 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-brand-primary: #d4af37;
+  --color-brand-secondary: #b89028;
+  --color-brand-accent: #e7cf7a;
+  --color-text-primary: #111111;
+  --color-text-secondary: #4b5563;
+  --color-bg-primary: #ffffff;
+  --color-bg-alt: #faf8f2;
+  --color-border: #e8ddb4;
+
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --shadow-soft: 0 4px 24px rgba(17, 17, 17, 0.06);
+  --shadow-gold: 0 8px 32px rgba(212, 175, 55, 0.15);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg-primary text-text-primary font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif font-semibold tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-brand-accent/40 text-text-primary;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-primary;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .section-padding {
+    @apply px-4 py-16 sm:px-6 lg:px-8 lg:py-24;
+  }
+
+  .container-narrow {
+    @apply mx-auto max-w-7xl;
+  }
+
+  .gold-gradient-text {
+    @apply bg-gradient-to-r from-brand-secondary via-brand-primary to-brand-accent bg-clip-text text-transparent;
+  }
+
+  .gold-border-gradient {
+    background: linear-gradient(135deg, #d4af37, #e7cf7a, #b89028);
+  }
+}
